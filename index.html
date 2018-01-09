@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<head>
+
+
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Get started · Simpla</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Simpla Contributors">
+
+
+<!-- Include Simpla, Netlify auth adapter, and cross-browser polyfill-->
+<script src="https://unpkg.com/simpla@^3.0.0"></script>
+<script src="https://unpkg.com/simpla@^3.0.0/adapters/netlify.js"></script>
+<script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js" async></script>
+
+
+<!-- Import Simpla elements -->
+<link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+<link rel="import" href="/bower_components/simpla-img/simpla-img.html">
+<link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
+
+<!-- Init Simpla -->
+<script>
+  Simpla.init({
+
+    // The Github repo you want Simpla to use
+    repo: 'neirene/moe-engine',
+
+    // Netlify auth adapter, initialize with your Netlify site name
+    auth: new SimplaNetlify({ site: 'moe-engine' }),
+
+    // Public content source (optional)
+    // Defaults to fetching directly from Github
+    source: 'https://moe-engine.netlify.com'
+
+  });
+</script>
+</head>
+<html>
+    <body>
+<!-- Block of editable richtext -->
+<simpla-text path="/text">this is a block of rich text</simpla-text>
+
+<!-- An editable image -->
+<img is="simpla-img" path="/section/img">
+
+    </body>
+</html>
+
